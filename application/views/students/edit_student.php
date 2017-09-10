@@ -47,15 +47,11 @@
 				</div>
 				<div class="form-group">
 					<label for="course">Course: <?php echo $student[0]['course']; ?></label>
-					<select class="form-control" id="course" name="course">
-						<option value="BSIT">BSIT
-						</option>
-					</select>
+					<input type="text" class="form-control" id="course" name="course" />
 				</div>
 				<div class="form-group">
 					<label for="sex">Sex <?php echo $student[0]['sex']; ?></label>
-					<input type="radio" class="" id="sex" name="sex" value="M" /> Male
-					<input type="radio" class="" id="sex" name="sex" value="F" /> Female
+					<input type="text" class="form-control" id="course" name="course" />
 				</div>	
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary">
@@ -101,7 +97,7 @@
 if( isset($saved) && $saved==TRUE ){
 ?>
 <script type="text/javascript">
-	alert("The new student record was successfully saved!");
+	alert("The new student record was successfully edited!");
 	location.href = '<?php echo base_url('Boots/view_students'); ?>';
 </script>
 <?php
