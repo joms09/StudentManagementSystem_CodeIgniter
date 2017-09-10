@@ -155,4 +155,28 @@ class Boots extends CI_Controller {
 		$this->load->view('students/new_course', $data);
 		$this->load->view('include/footer');
 	}
+	
+	public function delete_record($id){
+		$students = $this->Students->delete_student(array('idno'=>$id));
+		$header_data['title'] = "Delete Student";
+		$data['students']=$students;
+		$this->load->view('include/header',$header_data);
+		if(!empty($_SERVER['HTTP_REFERER'])){
+			redirect($_SERVER['HTTP_REFERER']);
+		} else {
+		}
+	}
+	
+	public function edit_student($id){
+		$students = $this->Students->read(array('idno'=>$id));
+		$header_data['title'] = "Student Update";
+		$data['students']=$students;
+		$this->load->view('include/header',$header_data);
+		$this->load->view('students/edit_student', $data);
+		if(isset($_POST['submit'])){	
+			$students = array('idno'=>$id,'lname'=>$_POST['lname'],'fname'=>$_POST['fname'],'mname'=>$_POST['mname'],
+				'sex'=>$_POST['sex'],'course'=>$_POST['course']);
+			$this->Students->update($id, $students);
+		}
+	}
 }
