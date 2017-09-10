@@ -5,15 +5,15 @@
 		</div>
 	</div>
 	<div class="row">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="<?php echo base_url('Boots'); ?>">Home</a></li>
-						<li><a href="<?php echo base_url('Boots/view_courses'); ?>">Student Courses</a></li>
-						<li><a href="<?php echo base_url('Boots/view_students'); ?>">View Students</a></li>
-					</ul>
-				</div>
-			</nav>
+			<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="<?php echo base_url('Boots'); ?>">Home</a></li>
+					<li><a href="<?php echo base_url('Boots/view_courses'); ?>">Student Courses</a></li>
+					<li><a href="<?php echo base_url('Boots/view_students'); ?>">View Students</a></li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 		<div class="col-md-12 contents">
 			<p class="lead">View Student</p>
@@ -48,8 +48,8 @@
 								<td>'.$s['sex'].'</td>
 								<td>
 									<a href="'.base_url('students/profile/'.$s['idno']).'">View</a> |
-									<a href="'.base_url('students/edit_student'.$s['idno']).'">Edit</a> |
-									<a href="'.base_url('Boots/delete_record/'.$s['idno'].'').'" class="delete">Delete</a>
+									<a href="'.base_url('students/profile/'.$s['idno']).'">Edit</a> |
+									<a href="'.base_url('Boots/delete_record/'.$s['idno']).'">Delete</a>
 								</td>
 							</tr>
 							';

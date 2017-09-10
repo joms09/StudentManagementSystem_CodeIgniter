@@ -32,9 +32,9 @@ class Students_model extends CI_Model {
 	}
 	
 	public function update($id, $students){
-		$this->db->where("idno", $id);
-		$this->db->update("students", $students);
-		return TRUE;	
+		$this->db->where("idno",$id);
+        $this->db->update("students", $students);
+        return TRUE;	
 	}
 	
 	public function delete_student($id){

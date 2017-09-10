@@ -169,13 +169,12 @@ class Boots extends CI_Controller {
 	
 	public function edit_student($id){
 		$students = $this->Students->read(array('idno'=>$id));
-		$header_data['title'] = "Student Update";
-		$data['students']=$students;
+		$header_data['title'] = "Student edit";
+		$data['students'] = $students;
+		$this->load->view('students/edit_student',$data);
 		$this->load->view('include/header',$header_data);
-		$this->load->view('students/edit_student', $data);
 		if(isset($_POST['submit'])){	
-			$students = array('idno'=>$id,'lname'=>$_POST['lname'],'fname'=>$_POST['fname'],'mname'=>$_POST['mname'],
-				'sex'=>$_POST['sex'],'course'=>$_POST['course']);
+			$student=array('idno'=>$id,'lname'=>$_POST['lname'],'fname'=>$_POST['fname'],'mname'=>$_POST['mname'],'sex'=>$_POST['sex'],'course'=>$_POST['course']);
 			$this->Students->update($id, $students);
 		}
 	}

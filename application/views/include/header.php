@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <title><?php echo $title; ?></title>
@@ -13,6 +13,8 @@
 
 <script src="<?php echo base_url('bootstrap/js/jquery.min.js'); ?>"></script>
 <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
+<script src="<?php echo base_url('bootstrap/js/bootstrap1.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
 
 </head>
 <body>

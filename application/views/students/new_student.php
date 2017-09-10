@@ -5,15 +5,15 @@
 		</div>
 	</div>
 	<div class="row">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="<?php echo base_url('Boots'); ?>">Home</a></li>
-						<li><a href="<?php echo base_url('Boots/view_courses'); ?>">Student Courses</a></li>
-						<li><a href="<?php echo base_url('Boots/view_students'); ?>">View Students</a></li>
-					</ul>
-				</div>
-			</nav>
+			<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="<?php echo base_url('Boots'); ?>">Home</a></li>
+					<li><a href="<?php echo base_url('Boots/view_courses'); ?>">Student Courses</a></li>
+					<li><a href="<?php echo base_url('Boots/view_students'); ?>">View Students</a></li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 		<div class="col-md-2">
 		</div>
@@ -48,8 +48,12 @@
 				<div class="form-group">
 					<label for="course">Course:</label>
 					<select class="form-control" id="course" name="course">
-						<option value="BSIT">BSIT
-						</option>
+						<option value="BSIT">BSIT</option>
+						<?php
+							// foreach($courses as $c){
+								// echo '<option value"' . $c['name'] . '">' . $c['name']. '</option>';
+							// }
+						 // ?>
 					</select>
 				</div>
 				<div class="form-group">
