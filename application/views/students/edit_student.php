@@ -18,7 +18,7 @@
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-8 contents">
-			<p class="lead">Add New Student</p>
+			<p class="lead">Edit Student</p>
 			<form role="form" class="" method="post">
 				
 				<div class="text-danger">
@@ -30,30 +30,30 @@
 				</div>
 				
 				<div class="form-group">
-					<label for="idno">ID No.:</label>
+					<label for="idno">ID No.: <?php echo $student[0]['idno']; ?></label>
 					<input type="text" class="form-control" id="idno" name="idno" />
 				</div>
 				<div class="form-group">
-					<label for="lname">Last Name:</label>
+					<label for="lname">Last Name: <?php echo $student[0]['lname']; ?></label>
 					<input type="text" class="form-control" id="lname" name="lname" />
 				</div>	
 				<div class="form-group">
-					<label for="fname">First Name:</label>
+					<label for="fname">First Name: <?php echo $student[0]['fname']; ?></label>
 					<input type="text" class="form-control" id="fname" name="fname" />
 				</div>
 				<div class="form-group">
-					<label for="mname">Middle Name:</label>
+					<label for="mname">Middle Name: <?php echo $student[0]['mname']; ?></label>
 					<input type="text" class="form-control" id="mname" name="mname" />
 				</div>
 				<div class="form-group">
-					<label for="course">Course:</label>
+					<label for="course">Course: <?php echo $student[0]['course']; ?></label>
 					<select class="form-control" id="course" name="course">
 						<option value="BSIT">BSIT
 						</option>
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="sex">Sex</label>
+					<label for="sex">Sex <?php echo $student[0]['sex']; ?></label>
 					<input type="radio" class="" id="sex" name="sex" value="M" /> Male
 					<input type="radio" class="" id="sex" name="sex" value="F" /> Female
 				</div>	
@@ -108,7 +108,3 @@ if( isset($saved) && $saved==TRUE ){
 }
 
 ?>
-
-
-
-

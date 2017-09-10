@@ -48,8 +48,8 @@
 								<td>'.$s['sex'].'</td>
 								<td>
 									<a href="'.base_url('students/profile/'.$s['idno']).'">View</a> |
-									<a href="">Edit</a> |
-									<a href="" class="delete">Delete</a>
+									<a href="'.base_url('students/edit_student'.$s['idno']).'">Edit</a> |
+									<a href="'.base_url('Boots/delete_record/'.$s['idno'].'').'" class="delete">Delete</a>
 								</td>
 							</tr>
 							';
